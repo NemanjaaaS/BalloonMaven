@@ -11,12 +11,9 @@ public class Solution {
     public Solution(String S) {
         s = S;
     }
-
-
-    public int solution(String S){
-        int result = 0;
+    HashMap<Character,Integer> Smap = new HashMap<Character,Integer>();
+    public HashMap fillSmap(){
         s = s.toUpperCase();
-        HashMap<Character,Integer> Smap = new HashMap<Character,Integer>();
         Smap.put('B',0);
         Smap.put('A',0);
         Smap.put('L',0);
@@ -33,16 +30,31 @@ public class Solution {
         }
         Smap.compute('L',(k,v)->v/2);
         Smap.compute('O',(k,v)->v/2);
+        return Smap;
+    }
 
+
+    public int[] fillArr(){
         int[] tempArr = new int[Smap.size()];
+
         for(int j = 0;j<Smap.size();j++){
             for(Character i : Smap.keySet()){
                 tempArr[j] = Smap.get(i);
             }
         }
-        Arrays.sort(tempArr);
-        result = tempArr[0];
-        return result;
+        return tempArr;
+    }
+
+
+    public int solution(String S){
+        fillSmap();
+
+        fillArr();
+
+        Arrays.sort(fillArr());
+        System.out.println(fillArr());
+
+        return fillArr()[0];
     }
 
 

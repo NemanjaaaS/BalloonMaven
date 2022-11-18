@@ -1,11 +1,8 @@
 package org.example;
-
-import Exceptions.NoFileException;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class writeInFile {
     String rec;

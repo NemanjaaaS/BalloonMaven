@@ -9,10 +9,7 @@ import java.util.ArrayList;
 import java.util.stream.Stream;
 
 public class ReadFromFile {
-
     public String path;
-    public String word;
-
     public ReadFromFile(String Path) {
         path = Path;
 
