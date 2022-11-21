@@ -1,10 +1,10 @@
 package Server;
 
 import org.example.SolutionAll;
-import org.example.writeInFile;
+
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
+
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,40 +12,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Enumeration;
+
 
 @WebServlet("/Server")
-@MultipartConfig
+
 
 public class Server extends HttpServlet{
+
+    ArrayList<Integer> arr = new ArrayList<>();
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
         response.setContentType("text/html;charset=UTF-8");
 
-        String filename = "src/main/java/files/searchStrings.txt";
-        String recname = "src/main/java/files/rec.txt";
-        ServletContext context = getServletContext();
+        PrintWriter writer = response.getWriter();
 
-        InputStream is = context.getResourceAsStream(filename);
+        File file = new File("C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\searchStrings.txt");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String str;
 
-        InputStream is2 = context.getResourceAsStream(recname);
-
-
-        if(is != null){
-            InputStreamReader isr = new InputStreamReader(is);
-            InputStreamReader isr2 = new InputStreamReader(is2);
-            BufferedReader reader = new BufferedReader(isr);
-            BufferedReader reader2 = new BufferedReader(isr2);
-            PrintWriter writer = response.getWriter();
-            String text;
-            String rec = reader2.readLine();
+        File recFile = new File("C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\rec.txt");
+        BufferedReader br2 = new BufferedReader(new FileReader(recFile));
+        String rec = br2.readLine();
 
 
-            while((text = reader.readLine())!= null){
-                SolutionAll solutionAll = new SolutionAll(text,rec);
-                writer.println("WORD "+rec+"is "+solutionAll.solution(text,rec)+" times in word "+text);
-            }
-
-
+        while ((str= br.readLine())!= null){
+            SolutionAll solutionAll = new SolutionAll(str,rec);
+            //writer.println(rec +" is in word "+str);
+            writer.println(str);
+            writer.println(solutionAll.solution(str,rec));
+            arr.add(solutionAll.solution(str,rec));
 
         }
 
@@ -54,84 +49,30 @@ public class Server extends HttpServlet{
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
         response.setContentType("text/html;charset=UTF-8");
 
-        String filename = "src/main/java/files/searchStrings.txt";
-        String recname = "src/main/java/files/rec.txt";
-        String fileresult = "src/main/java/files/results.txt";
-        ServletContext context = getServletContext();
+        PrintWriter writer = response.getWriter();
+        String filePath ="C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\results.txt";
+        File file = new File("C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\searchStrings.txt");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String str;
 
-        InputStream is = context.getResourceAsStream(filename);
+        File recFile = new File("C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\rec.txt");
+        BufferedReader br2 = new BufferedReader(new FileReader(recFile));
+        String rec = br2.readLine();
 
-        InputStream is2 = context.getResourceAsStream(recname);
+        BufferedWriter fw = new BufferedWriter(new FileWriter(filePath));
 
+        while ((str= br.readLine())!= null){
+            SolutionAll solutionAll = new SolutionAll(str,rec);
+            int res = solutionAll.solution(str,rec);
+            writer.println(res);
 
-        if(is != null){
-            InputStreamReader isr = new InputStreamReader(is);
-            InputStreamReader isr2 = new InputStreamReader(is2);
-            BufferedReader reader = new BufferedReader(isr);
-            BufferedReader reader2 = new BufferedReader(isr2);
-            PrintWriter writer = response.getWriter();
-            String text = reader.readLine();
-            String rec = reader2.readLine();
-
-            PrintWriter fileWriter = new PrintWriter(new FileOutputStream(fileresult,true));
-
-
-            while(text!= null){
-                SolutionAll solutionAll = new SolutionAll(text,rec);
-                writer.println("WORD "+rec+"is "+solutionAll.solution(text,rec)+" times in word "+text);
-                fileWriter.println(solutionAll.solution(text,rec));
-
-            }
-            fileWriter.close();
-            reader2.close();
-            reader.close();
+            fw.write("" + res + "\n");
 
         }
+        fw.close();
 
     }
 
-    public void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html;charset=UTF-8");
-
-        String filename = "src/main/java/files/searchStrings.txt";
-        String recname = "src/main/java/files/rec.txt";
-        String fileresult = "src/main/java/files/results.txt";
-        ServletContext context = getServletContext();
-
-        InputStream is = context.getResourceAsStream(filename);
-
-        InputStream is2 = context.getResourceAsStream(recname);
-
-
-        if(is != null){
-            InputStreamReader isr = new InputStreamReader(is);
-            InputStreamReader isr2 = new InputStreamReader(is2);
-            BufferedReader reader = new BufferedReader(isr);
-            BufferedReader reader2 = new BufferedReader(isr2);
-            PrintWriter writer = response.getWriter();
-            String text = reader.readLine();
-            String rec = reader2.readLine();
-
-            PrintWriter fileWriter = new PrintWriter(new FileOutputStream(fileresult,false));
-
-
-            while(text!= null){
-                SolutionAll solutionAll = new SolutionAll(text,rec);
-                writer.println("WORD "+rec+"is "+solutionAll.solution(text,rec)+" times in word "+text);
-                fileWriter.println(solutionAll.solution(text,rec));
-
-            }
-            fileWriter.close();
-            reader2.close();
-            reader.close();
-
-        }
-
-    }
 }
 
-
-
-
-   // public void doPost()
 
