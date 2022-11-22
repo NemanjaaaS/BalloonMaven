@@ -12,7 +12,7 @@ public class writeInFile {
     }
 
     public ArrayList<String> writeInFile(String rec) throws IOException {
-
+        //ArrayList<String> res = new ArrayList<>();
 
         String StringPath = "src/main/java/files/searchStrings.txt";
 
@@ -35,11 +35,8 @@ public class writeInFile {
 
 
         ReadFromFile readF = new ReadFromFile(filePath);
-
         ArrayList<String> rezultat = new ArrayList<>();
-
         readF.ReadFromFile(filePath).forEach(i->rezultat.add(i));
-
 
         return rezultat;
 

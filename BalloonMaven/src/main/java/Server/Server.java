@@ -1,11 +1,6 @@
 package Server;
 
 import org.example.SolutionAll;
-
-
-import javax.servlet.ServletContext;
-
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -73,5 +68,3 @@ public class Server extends HttpServlet{
     }
 
 }
-
-
