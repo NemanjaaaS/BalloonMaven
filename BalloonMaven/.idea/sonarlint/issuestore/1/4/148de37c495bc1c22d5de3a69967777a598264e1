@@ -1,0 +1,48 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾©ò¹
+g
+java:S2095""LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(•Ó˜£ÿÿÿÿÿ
+g
+java:S2095:"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(•Ó˜£ÿÿÿÿÿ
+g
+java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¹®Ùœÿÿÿÿÿ
+g
+java:S2095="LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(Õ»®şÿÿÿÿ
+g
+java:S20956"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(¹®Ùœÿÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(°¥¸û
+f
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(×–·›
+\
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Ó›ãÓûÿÿÿÿ
+W
+java:S1075!"ARefactor your code to get this URI from a customizable parameter.(Ãà›
+j
+java:S1989#"OHandle the following exception that could be thrown by "readLine": IOException.(Á¿‡ıÿÿÿÿ
+e
+java:S1989&"OHandle the following exception that could be thrown by "readLine": IOException.(Û‘ç¹
+P
+java:S11610":Add the "@Override" annotation above this method signature(à»¢ü
+f
+java:S19893"PHandle the following exception that could be thrown by "getWriter": IOException.(×–·›
+W
+java:S10754"ARefactor your code to get this URI from a customizable parameter.(ã¹ß
+\
+java:S10755"ARefactor your code to get this URI from a customizable parameter.(Ó›ãÓûÿÿÿÿ
+W
+java:S10759"ARefactor your code to get this URI from a customizable parameter.(Ãà›
+j
+java:S1989;"OHandle the following exception that could be thrown by "readLine": IOException.(Á¿‡ıÿÿÿÿ
+e
+java:S1989?"OHandle the following exception that could be thrown by "readLine": IOException.(Û‘ç¹
+b
+java:S1989D"LHandle the following exception that could be thrown by "write": IOException.(ÁÃ–å
+g
+java:S1989G"LHandle the following exception that could be thrown by "close": IOException.(’™à€üÿÿÿÿ
+O
+java:S1128"9Remove this unused import 'javax.servlet.ServletContext'.(á¡æŞ
+[
+java:S1128"ERemove this unused import 'javax.servlet.annotation.MultipartConfig'.(Æ‡Ä»
+m
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(»ÙÂV
