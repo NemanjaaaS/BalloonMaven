@@ -12,7 +12,7 @@ public class writeInFile {
     }
 
     public ArrayList<String> writeInFile(String rec) throws IOException {
-        //ArrayList<String> res = new ArrayList<>();
+
 
         String StringPath = "src/main/java/files/searchStrings.txt";
 
@@ -30,21 +30,16 @@ public class writeInFile {
 
             fw.write(str);
 
-
-
-            //System.out.println("Resenje za sve "+str);
         }
         fw.close();
 
 
         ReadFromFile readF = new ReadFromFile(filePath);
-        //res = readF.ReadFromFile(filePath);
-        //System.out.println(readF.ReadFromFile(filePath));
+
         ArrayList<String> rezultat = new ArrayList<>();
-        //rezultat = readF.ReadFromFile(filePath);
+
         readF.ReadFromFile(filePath).forEach(i->rezultat.add(i));
 
-        //System.out.println("OVO JE REZULTAT U wIf: "+rezultat);
 
         return rezultat;
 

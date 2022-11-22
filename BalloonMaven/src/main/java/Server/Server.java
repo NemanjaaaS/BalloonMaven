@@ -37,7 +37,6 @@ public class Server extends HttpServlet{
 
         while ((str= br.readLine())!= null){
             SolutionAll solutionAll = new SolutionAll(str,rec);
-            //writer.println(rec +" is in word "+str);
             writer.println(str);
             writer.println(solutionAll.solution(str,rec));
             arr.add(solutionAll.solution(str,rec));
