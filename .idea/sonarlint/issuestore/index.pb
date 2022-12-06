@@ -1,0 +1,23 @@
+
+^
+.src/main/java/Exceptions/NoInputException.java,9\5\9588100372cd131609b6c2ebf97f30c8817f1c75
+]
+-src/main/java/Exceptions/IndexOutOfBound.java,5\7\5742145c4b2446bea018c05add30575b15433035
+`
+0src/main/java/Exceptions/EmptyFileException.java,4\b\4bfa9cc9384e661f02033e5ef23eff3e136c2246
+]
+-src/main/java/Exceptions/NoFileException.java,e\2\e24760a4f5b2d3641e402881bc46d3f0860d5f47
+@
+BalloonMaven.iml,8\1\816ab95804a9fe8d2c3ba7280208fe27b58befcc
+_
+/src/test/java/org/example/ReadFromFileTest.java,2\1\214381870bf7b0d47441f144fc9c31e6064f05b1
+[
++src/main/java/org/example/ReadFromFile.java,4\4\447ca38f6763691e2b9766fdfad4ea10d1eb6986
+Z
+*src/main/java/org/example/writeInFile.java,4\7\477f0f040ccb74a07da0865af3d2df828f2f0bf9
+S
+#src/main/java/org/example/Main.java,0\b\0ba1b9c7a4878802f938e331cc2d8a042087ec6b
+O
+src/main/java/files/results.txt,2\7\271bada2789e6036dc852b0461208735a638ad8c
+P
+ src/main/java/Server/Server.java,1\4\148de37c495bc1c22d5de3a69967777a598264e1
