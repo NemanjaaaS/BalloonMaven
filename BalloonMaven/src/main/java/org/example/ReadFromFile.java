@@ -1,6 +1,6 @@
 package org.example;
 
-import Exceptions.NoFileException;
+import Exceptions.*;
 
 import java.io.IOException;
 import java.nio.file.Files;

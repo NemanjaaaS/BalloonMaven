@@ -14,12 +14,12 @@ public class writeInFile {
     public ArrayList<String> writeInFile(String rec) throws IOException {
 
 
-        String StringPath = "src/main/java/files/searchStrings.txt";
+        String StringPath = "BalloonMaven/src/main/java/files/searchStrings.txt";
 
         ReadFromFile rf = new ReadFromFile(StringPath);
         ArrayList<String> S = rf.ReadFromFile(StringPath);
 
-        String filePath ="src/main/java/files/results.txt";
+        String filePath ="BalloonMaven/src/main/java/files/results.txt";
         FileWriter fw = new FileWriter(filePath,false);
 
 

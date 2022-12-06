@@ -1,14 +1,15 @@
 package org.example;
 
-import Exceptions.NoFileException;
+import Exceptions.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ReadFromFileTest {
-    String StringPath = "src/main/java/files/searchStrings.txt";
+    String StringPath = "BalloonMaven/src/main/java/files/searchStrings.txt";
     String StringPathWrong = "src/main/java/files/unknown.txt";
 
     ReadFromFile rf = new ReadFromFile(StringPath);

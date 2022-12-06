@@ -2,10 +2,6 @@ package Server;
 
 import org.example.SolutionAll;
 
-
-import javax.servlet.ServletContext;
-
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,11 +22,11 @@ public class Server extends HttpServlet{
 
         PrintWriter writer = response.getWriter();
 
-        File file = new File("C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\searchStrings.txt");
+        File file = new File("BalloonMaven/src/main/java/files/searchStrings.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String str;
 
-        File recFile = new File("C:\\Users\\nstefanovic\\IdeaProjects\\BalloonMaven\\src\\main\\java\\files\\rec.txt");
+        File recFile = new File("BalloonMaven/src/main/java/files/rec.txt");
         BufferedReader br2 = new BufferedReader(new FileReader(recFile));
         String rec = br2.readLine();
 
