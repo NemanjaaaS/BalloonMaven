@@ -13,7 +13,6 @@ class ReadFromFileTest {
     String StringPathWrong = "src/main/java/files/unknown.txt";
 
     ReadFromFile rf = new ReadFromFile(StringPath);
-    //ArrayList<String> str = rf.ReadFromFile(StringPath);
 
     @Test
     void readFromFile() throws NoFileException {
@@ -24,7 +23,6 @@ class ReadFromFileTest {
         testString.add("ONLABLABLOON");
 
         assertEquals(testString,rf.ReadFromFile(StringPath));
-        //assertDoesNotThrow(()->rf.ReadFromFile(StringPath));
 
         System.out.println("Data from file read successfully");
     }

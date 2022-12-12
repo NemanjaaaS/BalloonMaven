@@ -1,7 +1,10 @@
 package Server;
 
 import org.example.SolutionAll;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e63d4eb2d0e8a6cd6036b100ea28555314442ef2
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -69,5 +72,3 @@ public class Server extends HttpServlet{
     }
 
 }
-
-

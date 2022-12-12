@@ -6,7 +6,11 @@
 
     <groupId>org.example</groupId>
     <artifactId>BalloonMaven</artifactId>
+<<<<<<< HEAD
     <version>3.8.6</version>
+=======
+    <version>1.0 SNAPSHOT</version>
+>>>>>>> e63d4eb2d0e8a6cd6036b100ea28555314442ef2
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -41,8 +45,8 @@
 
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

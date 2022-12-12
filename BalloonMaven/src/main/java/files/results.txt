@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 Rec: BALLOON se pojavljuje 1 u reci:BAONXXOLL
 Rec: BALLOON se pojavljuje 2 u reci:BAOOLLNNOLOLGBAX
 Rec: BALLOON se pojavljuje 0 u reci:QAWABAWONL
 Rec: BALLOON se pojavljuje 3 u reci:ONLABLABLOONBALLOONBALLOON
+=======
+Rec: BALLON se pojavljuje 2 u reci:BAONXXOLL
+Rec: BALLON se pojavljuje 4 u reci:BAOOLLNNOLOLGBAX
+Rec: BALLON se pojavljuje 1 u reci:QAWABAWONL
+Rec: BALLON se pojavljuje 7 u reci:ONLABLABLOONBALLOONBALLOON
+>>>>>>> e63d4eb2d0e8a6cd6036b100ea28555314442ef2
